@@ -8,7 +8,7 @@ MIN_VALUE = 5
 MAX_VALUE = 20
 
 
-@main.route('/add', methods=['GET'])
+@main.route('/add', methods=['GET'], endpoint='math_add')
 def add():
     while True:
         num1 = random.randint(MIN_VALUE, MAX_VALUE)
@@ -19,7 +19,7 @@ def add():
     return render_template('mathematics/add.html', num1=num1, num2=num2)
 
 
-@main.route('/sub', methods=['GET'])
+@main.route('/sub', methods=['GET'], endpoint='math_sub')
 def sub():
     while True:
         num1 = random.randint(MIN_VALUE, MAX_VALUE)

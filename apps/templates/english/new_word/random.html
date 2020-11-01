@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}生词{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/english.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>生词</h1>
+        </div>
+        <div class="new_word">{{ new_word }}</div>
+    </div>
+{% endblock %}
