@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}心算加法{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mathematics.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>心算加法</h1>
+        </div>
+        <div class="math">
+            <span id="num1">{{ num1 }}</span>
+            <span id="operator">+</span>
+            <span id="num2">{{ num2 }}</span>
+            <span> = ?</span>
+        </div>
+    </div>
+{% endblock %}
