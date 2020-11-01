@@ -12,6 +12,14 @@
         <div class="page-header">
             <h1>生词</h1>
         </div>
-        <div class="new_word">{{ new_word }}</div>
+        <div id="new_word" class="new_word">{{ new_word }}</div>
+        <input type="button" id="tts_btn" onclick="document.getElementById('tts_autio_id').play()" value="播放">
+        <div>
+            <audio id="tts_autio_id" autoplay="">
+                <source id="tts_source_id" src="http://tts.baidu.com/text2audio?lan=en&ie=UTF-8&spd=3&text={{ new_word }}"
+                        type="audio/mpeg">
+                <embed id="tts_embed_id" height="0" width="0" src="">
+            </audio>
+        </div>
     </div>
 {% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Home Site{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>Home Site</h1>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="{{ url_for('mathematics.math_add') }}">心算加法</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('mathematics.math_sub') }}">心算减法</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('english.new_word_random') }}">生词本</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
